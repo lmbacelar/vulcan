@@ -1,6 +1,4 @@
-require 'active_model'
-require_relative '../../../app/models/iec60751/temperature_computation'
+require 'spec_helper'
 
 describe Iec60751::TemperatureComputation do
-
 end

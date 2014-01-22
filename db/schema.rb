@@ -11,9 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140121232450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "iec60751_temperature_computations", force: true do |t|
+    t.float    "resistance",                       null: false
+    t.float    "temperature",                      null: false
+    t.float    "r0",          default: 100.0,      null: false
+    t.float    "a",           default: 0.0039083,  null: false
+    t.float    "b",           default: -5.775e-07, null: false
+    t.float    "c",           default: -4.183e-12, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

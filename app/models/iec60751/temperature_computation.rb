@@ -1,6 +1,7 @@
-module Iec60751
-  class TemperatureComputation
-    include ActiveModel::Model
-    attr_accessor :resistance, :temperature
+class Iec60751::TemperatureComputation < ActiveRecord::Base
+  before_validation :update_temperature
+
+  def update_temperature
+    self.temperature = 0
   end
 end
