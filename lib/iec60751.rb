@@ -1,0 +1,8 @@
+class Iec60751
+  RESISTANCE_RANGE  = 18.5201..390.4811
+  TEMPERATURE_RANGE = -200.000..850.000
+
+  def self.t90 r
+    0
+  end
+end
