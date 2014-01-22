@@ -16,3 +16,7 @@ Then /^the response status should be "([^\"]*)"$/ do |status|
     raise e
   end 
 end
+
+Then /^DEBUG$/ do
+  debugger
+end

@@ -11,4 +11,5 @@ Feature: IEC 60751 Temperature Computation
       { "resistance":"100.0" }
     """
     Then the response status should be "201"
+    And DEBUG
     And the JSON response at "temperature" should be 0.0
