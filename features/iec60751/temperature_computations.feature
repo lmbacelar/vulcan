@@ -6,7 +6,7 @@ Feature: IEC 60751 Temperature Computation
 
   Scenario: Get temperature from resistance according to IEC 60751
     Given I send and accept JSON
-    When I send a POST request to "/iec60751/temperature_computations" with:
+    When I POST to "/iec60751/temperature_computations" with:
     """
       { "resistance":"100.0" }
     """

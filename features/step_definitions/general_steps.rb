@@ -3,7 +3,7 @@ Given /^I send and accept JSON$/ do
   header 'Content-Type', 'application/json'
 end
 
-When /^I send a POST request to "([^\"]*)" with:$/ do |path, body|
+When /^I POST to "([^\"]*)" with:$/ do |path, body|
   post path, body
 end
 
