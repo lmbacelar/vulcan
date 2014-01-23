@@ -1,6 +1,6 @@
-class CreateIec60751ResistanceComputations < ActiveRecord::Migration
+class CreateIec60751Computations < ActiveRecord::Migration
   def change
-    create_table :iec60751_resistance_computations do |t|
+    create_table :iec60751_computations do |t|
       t.float  :resistance,   null: false
       t.float  :temperature,  null: false
       t.float  :r0,           null: false, default: 100.0

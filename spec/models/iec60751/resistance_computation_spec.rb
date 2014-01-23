@@ -2,12 +2,8 @@ require 'spec_helper'
 
 describe Iec60751::ResistanceComputation do
   context 'validates' do
-    it 'numericality of :resistance, :r0, :a, :b, :c' do
+    it 'numericality of :temperature' do
       expect(subject).to validate_numericality_of :temperature
-      expect(subject).to validate_numericality_of :r0
-      expect(subject).to validate_numericality_of :a
-      expect(subject).to validate_numericality_of :b
-      expect(subject).to validate_numericality_of :c
     end
 
     it 'inclusion of :temperature within IEC 60751 temperature range' do
