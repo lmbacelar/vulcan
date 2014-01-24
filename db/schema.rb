@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123202110) do
+ActiveRecord::Schema.define(version: 20140123235956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "iec60584_computations", force: true do |t|
+    t.float    "emf",                       null: false
+    t.float    "temperature",               null: false
+    t.string   "type",                      null: false
+    t.float    "a3",          default: 0.0, null: false
+    t.float    "a2",          default: 0.0, null: false
+    t.float    "a1",          default: 0.0, null: false
+    t.float    "a0",          default: 0.0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "iec60751_computations", force: true do |t|
     t.float    "resistance",                       null: false
