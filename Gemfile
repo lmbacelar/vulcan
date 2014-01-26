@@ -32,6 +32,13 @@ group :test do
   gem 'json_spec'
 end
 
+group :development do
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1'
+end
+
 group :development, :test do
   gem 'debugger'
   gem 'rspec-rails', '~> 2.0'
